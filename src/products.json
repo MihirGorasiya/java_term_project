@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Lays Ketchup",
+      "price": 4.99,
+      "discount": 0.99
+    },
+    {
+      "id": 1,
+      "name": "Lays originals",
+      "price": 4.99,
+      "discount": 0.99
+    },
+    {
+      "id": 2,
+      "name": "Lays Vinegar",
+      "price": 4.99,
+      "discount": 0.99
+    },
+    {
+      "id": 3,
+      "name": "Raffles Originals",
+      "price": 4.99,
+      "discount": 0.99
+    },
+    {
+      "id": 4,
+      "name": "M&M milk Chocolate",
+      "price": 3.49,
+      "discount": 0.29
+    },
+    {
+      "id": 5,
+      "name": "M&M peanut Chocolate",
+      "price": 3.49,
+      "discount": 0.29
+    },
+    {
+      "id": 6,
+      "name": "Mars chocolate Bar",
+      "price": 3.79,
+      "discount": 0.19
+    }
+  ]
+}
