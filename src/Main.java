@@ -8,18 +8,18 @@ public class Main {
         Cart cart = new Cart();
         Payment payment = new Payment() {
             @Override
-            void payment() {}
+            void payment(float amount) {}
         };
         CardPayment cardPayment = new CardPayment() {
             @Override
-            void payment() {
-                super.payment();
+            void payment(float amount) {
+                super.payment(amount);
             }
         };
         CashPayment cashPayment = new CashPayment() {
             @Override
-            void payment() {
-                super.payment();
+            void payment(float amount) {
+                super.payment(amount);
             }
         };
 
@@ -43,7 +43,7 @@ public class Main {
 
         //TODO: add cart update functionality (optional)
 
-        //TODO: implement payment select method
+
         System.out.println("\nPlease select payment method");
         System.out.println("press 0 for card payment.");
         System.out.println("press 1 for cash payment.");
@@ -56,19 +56,9 @@ public class Main {
         }
         payment.setPaymentMethod(paymentMethod);
 
-        //TODO: make payment
         if(payment.getPaymentMethod() == 0)
-            cardPayment.payment();
+            cardPayment.payment(cart.getPurchaseTotal());
         else
-            cashPayment.payment();
-
-
-
-//        System.out.println();
-//        i.id = 2;
-//        System.out.println(i.id);
-//        System.out.println(i.getItemName());
-//        System.out.println(i.getItemPrice());
-//        System.out.println(i.getItemDiscount());
+            cashPayment.payment(cart.getPurchaseTotal());
     }
 }

@@ -1,5 +1,5 @@
 public abstract class Payment {
-    abstract void payment();
+    abstract void payment(float amount);
     private int paymentMethod;
     public void setPaymentMethod(int payMethod){
         paymentMethod = payMethod;

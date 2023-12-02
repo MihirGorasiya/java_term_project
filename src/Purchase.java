@@ -7,17 +7,21 @@ public class Purchase {
     Purchase() {
         cartItemIndexes = new ArrayList<>();
     }
+    float purchaseTotal = 0.0f;
 
+    public float getPurchaseTotal(){
+        return purchaseTotal;
+    }
     public void displayAllProductIds() {
         System.out.println("\nAll products in cart");
         IndividualProduct individualProduct = new IndividualProduct();
-        double total = 0;
+        purchaseTotal = 0;
         for (int i : cartItemIndexes) {
             individualProduct.id = i;
-            total += individualProduct.getItemPrice();
+            purchaseTotal += individualProduct.getItemPrice();
             System.out.println(i + "\t\t" + individualProduct.getItemName() + "\t\t" + individualProduct.getItemPrice());
         }
         System.out.println("-------------------------------------------------------");
-        System.out.println(" \t\t\t\t\t\t\t\t" + total);
+        System.out.println(" \t\t\t\t\t\t\t\t" + purchaseTotal);
     }
 }
